@@ -1,0 +1,155 @@
+/* Importing Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --sdg-color-1: #e5243b;
+    --sdg-color-2: #DDA63A;
+    --sdg-color-3: #4C9F38;
+    --sdg-color-4: #C5192D;
+    --sdg-color-5: #FF3A21;
+    --sdg-color-6: #26BDE2;
+    --sdg-color-7: #FCC30B;
+    --sdg-color-8: #A21942;
+    --sdg-color-9: #FD6925;
+    --sdg-color-10: #DD1367;
+    --sdg-color-11: #FD9D24;
+    --sdg-color-12: #BF8B2E;
+    --sdg-color-13: #3F7E44;
+    --sdg-color-14: #0A97D9;
+    --sdg-color-15: #56C02B;
+    --sdg-color-16: #00689D;
+    --sdg-color-17: #19486A;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('DALL·E 2024-10-04 11.59.22 - A vibrant and professional background image representing the Sustainable Development Goals (SDGs). The image features a globe symbolizing global coope.webp'); /* Use the uploaded image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Using Google Font */
+    overflow: hidden; /* Prevent scrolling on smaller screens */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px; /* Space between header and circle */
+}
+
+.title {
+    font-size: 36px; /* Larger font size for title */
+    color: #000; /* Black color for better visibility */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Light shadow for depth */
+}
+
+.subtitle {
+    font-size: 18px; /* Medium font size for subtitle */
+    color: #333; /* Darker shade for contrast */
+    margin: 0;
+}
+
+.circle-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+}
+
+.globe {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Earth_Eastern_Hemisphere.jpg/1200px-Earth_Eastern_Hemisphere.jpg");
+    background-size: cover;
+    filter: blur(3px); /* Soft blur for the globe */
+    z-index: 0; /* Ensuring the globe stays in the background */
+    will-change: filter; /* Optimize performance for the filter effect */
+}
+
+.sdg {
+    position: absolute;
+    width: 60px;
+    height: 60px; /* Circular SDG buttons */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for transform */
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1; /* Ensuring SDG buttons are above the globe */
+    will-change: transform, background-color; /* Enable hardware acceleration for transform and background-color changes */
+}
+
+.sdg:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect with transparency */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.sdg.clicked {
+    animation: clickAnimation 1s forwards; /* Reduced animation duration for better performance */
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly less scaling for better performance */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* SDG button positions and colors with adjusted angles */
+.sdg1  { transform: rotate(0deg) translateX(260px); background-color: #e5243b; }
+.sdg2  { transform: rotate(21deg) translateX(260px); background-color: #DDA63A; }
+.sdg3  { transform: rotate(42deg) translateX(260px); background-color: #4C9F38; }
+.sdg4  { transform: rotate(63deg) translateX(260px); background-color: #C5192D; }
+.sdg5  { transform: rotate(84deg) translateX(260px); background-color: #FF3A21; }
+.sdg6  { transform: rotate(105deg) translateX(260px); background-color: #26BDE2; }
+.sdg7  { transform: rotate(126deg) translateX(260px); background-color: #FCC30B; }
+.sdg8  { transform: rotate(147deg) translateX(260px); background-color: #A21942; }
+.sdg9  { transform: rotate(168deg) translateX(260px); background-color: #FD6925; }
+.sdg10 { transform: rotate(189deg) translateX(260px); background-color: #DD1367; }
+.sdg11 { transform: rotate(210deg) translateX(260px); background-color: #FD9D24; }
+.sdg12 { transform: rotate(231deg) translateX(260px); background-color: #BF8B2E; }
+.sdg13 { transform: rotate(252deg) translateX(260px); background-color: #3F7E44; }
+.sdg14 { transform: rotate(273deg) translateX(260px); background-color: #0A97D9; }
+.sdg15 { transform: rotate(294deg) translateX(260px); background-color: #56C02B; }
+.sdg16 { transform: rotate(315deg) translateX(260px); background-color: #00689D; }
+.sdg17 { transform: rotate(336deg) translateX(260px); background-color: #19486A; }
+
+/* Style for SDG name display */
+.sdg-text {
+    position: absolute;
+    bottom: 80px; /* Position above the SDG buttons */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 2; /* Above the SDG buttons */
+}
+
+.sdg-name {
+    font-weight: bold;
+    color: #333; /* Dark color for visibility */
+}

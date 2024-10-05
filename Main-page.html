@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Circular Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Sustainable Development Goals</h1>
+        <p class="subtitle">A Global Agenda for a Better Future</p>
+    </header>
+    <main class="circle-container">
+        <div class="globe" aria-hidden="true"></div>
+        <a href="sdg1.html" class="sdg sdg1" aria-label="Sustainable Development Goal 1" data-name="No Poverty">1</a>
+        <a href="sdg2.html" class="sdg sdg2" aria-label="Sustainable Development Goal 2" data-name="Zero Hunger">2</a>
+        <a href="sdg3.html" class="sdg sdg3" aria-label="Sustainable Development Goal 3" data-name="Good Health and Well-Being">3</a>
+        <a href="sdg4.html" class="sdg sdg4" aria-label="Sustainable Development Goal 4" data-name="Quality Education">4</a>
+        <a href="sdg5.html" class="sdg sdg5" aria-label="Sustainable Development Goal 5" data-name="Gender Equality">5</a>
+        <a href="sdg6.html" class="sdg sdg6" aria-label="Sustainable Development Goal 6" data-name="Clean Water and Sanitation">6</a>
+        <a href="sdg7.html" class="sdg sdg7" aria-label="Sustainable Development Goal 7" data-name="Affordable and Clean Energy">7</a>
+        <a href="sdg8.html" class="sdg sdg8" aria-label="Sustainable Development Goal 8" data-name="Decent Work and Economic Growth">8</a>
+        <a href="sdg9.html" class="sdg sdg9" aria-label="Sustainable Development Goal 9" data-name="Industry, Innovation and Infrastructure">9</a>
+        <a href="sdg10.html" class="sdg sdg10" aria-label="Sustainable Development Goal 10" data-name="Reduced Inequality">10</a>
+        <a href="sdg11.html" class="sdg sdg11" aria-label="Sustainable Development Goal 11" data-name="Sustainable Cities and Communities">11</a>
+        <a href="sdg12.html" class="sdg sdg12" aria-label="Sustainable Development Goal 12" data-name="Responsible Consumption and Production">12</a>
+        <a href="sdg13.html" class="sdg sdg13" aria-label="Sustainable Development Goal 13" data-name="Climate Action">13</a>
+        <a href="sdg14.html" class="sdg sdg14" aria-label="Sustainable Development Goal 14" data-name="Life Below Water">14</a>
+        <a href="sdg15.html" class="sdg sdg15" aria-label="Sustainable Development Goal 15" data-name="Life on Land">15</a>
+        <a href="sdg16.html" class="sdg sdg16" aria-label="Sustainable Development Goal 16" data-name="Peace, Justice and Strong Institutions">16</a>
+        <a href="sdg17.html" class="sdg sdg17" aria-label="Sustainable Development Goal 17" data-name="Partnerships for the Goals">17</a>
+    </main>
+    <div class="sdg-text">
+        <div class="sdg-abbreviation">SDG</div>
+        <div class="sdg-name"></div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sdg').forEach(function(sdg) {
+            sdg.addEventListener('mouseenter', function() {
+                const name = this.getAttribute('data-name');
+                document.querySelector('.sdg-name').textContent = name;
+                document.querySelector('.sdg-text').style.display = 'block';
+            });
+            sdg.addEventListener('mouseleave', function() {
+                document.querySelector('.sdg-name').textContent = '';
+                document.querySelector('.sdg-text').style.display = 'none';
+            });
+            sdg.addEventListener('click', function(event) {
+                event.preventDefault();
+                this.classList.add('clicked');
+                const href = this.getAttribute('href');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>

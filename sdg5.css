@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif; /* Consistent font-family */
+    line-height: 1.6; /* Improved readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+header {
+    text-align: center; /* Center the header content */
+    background-color: #f05a28; /* Header background color for SDG 5 */
+    color: white; /* Header text color */
+    padding: 20px 0; /* Padding for header */
+}
+
+.sdg-img {
+    width: 250px;  
+    height: auto;  
+    display: block; /* Center image in main */
+    margin: 20px auto; /* Margin for spacing */
+}
+
+.goal5 {
+    font-size: 1.5rem; /* Use relative units for better scalability */
+    color: #333; /* Dark text for better readability */
+    margin: 20px; /* Add spacing around the goal content */
+    padding: 20px; /* Add padding for inner spacing */
+    border: 1px solid #ddd; /* Add border for emphasis */
+    border-radius: 8px; /* Rounded corners for better look */
+    background-color: #fff; /* White background for content area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+h2 {
+    color: #f05a28; /* SDG color for the goal title */
+}
+
+h3 {
+    color: #4c9f38; /* Secondary color for subheadings */
+}
+
+ul {
+    margin: 10px 0; /* Spacing for lists */
+    padding-left: 20px; /* Indent for list items */
+}
+
+.navigation {
+    text-align: center; /* Center navigation buttons */
+    margin: 20px 0; /* Add margin */
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px; /* Slightly larger padding for better clickability */
+    margin: 10px;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for hover */
+    font-weight: bold; /* Emphasize button text */
+}
+.sdg6-button{
+    background-color: #26BDE2;
+}
+.sdg6-button:hover {
+    background-color: #2da5c3; 
+}
+/* Colors for SDG navigation buttons */
+.sdg4-button {
+    background-color: #C5192D; /* Color for SDG 5 */
+}
+
+.sdg4-button:hover {
+    background-color: #bb1c2f; /* Darker shade on hover for SDG 5 */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    padding: 10px 0; /* Padding for footer */
+    background-color: #f1f1f1; /* Light background for footer */
+    color: #333; /* Footer text color */
+    position: relative; /* Ensure footer is positioned correctly */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}
