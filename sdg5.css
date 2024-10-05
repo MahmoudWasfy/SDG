@@ -14,10 +14,10 @@ header {
 }
 
 .sdg-img {
-    width: 250px;  
+  width: 250px;  
     height: auto;  
-    display: block; 
-    margin: 20px auto; 
+    display: block; /* Center image in main */
+    margin: 20px auto; /* Margin for spacing */
 }
 
 .goal5 {
